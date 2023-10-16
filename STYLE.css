@@ -1,0 +1,49 @@
+
+
+h1 {
+    text-align: center;
+    color: #e100ff;
+}
+
+body {
+    background-color: #ffdfe9; 
+}
+
+
+p {
+    font-family: 'Arial', sans-serif;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 3px solid #00a2ff;
+}
+
+th, td {
+    padding: 10px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #cc00ff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+table#resultado {
+    margin: 20px auto;
+}
+
+table#resultado td {
+    padding: 10px;
+}
+
+
+

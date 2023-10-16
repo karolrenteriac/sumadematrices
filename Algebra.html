@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title>Suma de Matrices 3x3</title>
+    <link rel="stylesheet" type="text/css" href="STYLE.css">
+</head>
+<body>
+    <h1>SUMA DE MATRICES 3x3</h1>
+    
+    <center><p>Ingrese los valores de la matriz A:</p></center>
+    <table>
+        <tr>
+            <td><input id="a00" type="number"></td>
+            <td><input id="a01" type="number"></td>
+            <td><input id="a02" type="number"></td>
+        </tr>
+        <tr>
+            <td><input id="a10" type="number"></td>
+            <td><input id="a11" type="number"></td>
+            <td><input id="a12" type="number"></td>
+        </tr>
+        <tr>
+            <td><input id="a20" type="number"></td>
+            <td><input id="a21" type="number"></td>
+            <td><input id="a22" type="number"></td>
+        </tr>
+    </table>
+    
+    <center><p>Ingrese los valores de la matriz B:</p></center>
+    <table>
+        <tr>
+            <td><input id="b00" type="number"></td>
+            <td><input id="b01" type="number"></td>
+            <td><input id="b02" type="number"></td>
+        </tr>
+        <tr>
+            <td><input id="b10" type="number"></td>
+            <td><input id="b11" type="number"></td>
+            <td><input id="b12" type="number"></td>
+        </tr>
+        <tr>
+            <td><input id="b20" type="number"></td>
+            <td><input id="b21" type="number"></td>
+            <td><input id="b22" type="number"></td>
+        </tr>
+    </table>
+    
+    <button onclick="calcularSuma()">Calcular Suma</button>
+    
+    <center><p>Resultado:</p></center>
+    <table>
+        <tr>
+            <td id="r00"></td>
+            <td id="r01"></td>
+            <td id="r02"></td>
+        </tr>
+        <tr>
+            <td id="r10"></td>
+            <td id="r11"></td>
+            <td id="r12"></td>
+        </tr>
+        <tr>
+            <td id="r20"></td>
+            <td id="r21"></td>
+            <td id="r22"></td>
+        </tr>
+    </table>
+
+    <script>
+        function calcularSuma() {
+            var matrizA = [];
+            var matrizB = [];
+            var matrizResultado = [];
+
+            for (var i = 0; i < 3; i++) {
+                matrizA[i] = [];
+                matrizB[i] = [];
+                matrizResultado[i] = [];
+
+                for (var j = 0; j < 3; j++) {
+                    matrizA[i][j] = parseInt(document.getElementById('a' + i + j).value);
+                    matrizB[i][j] = parseInt(document.getElementById('b' + i + j).value);
+                    matrizResultado[i][j] = matrizA[i][j] + matrizB[i][j];
+                    document.getElementById('r' + i + j).textContent = matrizResultado[i][j];
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
